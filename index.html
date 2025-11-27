@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quote Generator</title>
+<title>Random Quote Generator</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="quote-box" id="quoteBox">🌟 Believe in yourself!</div>
+<h1>Random Quote Generator</h1>
 
-<button id="btn">Change Quote</button>
+<div class="quote-box" id="quoteBox">🌟 Believe in yourself!</div>
+<button id="btn">New Quote</button>
 
 <script>
     var quotes = [
@@ -49,12 +50,21 @@
     var quoteBox = document.getElementById("quoteBox");
     var button = document.getElementById("btn");
 
+    function getRandomColor() {
+        var hue = Math.floor(Math.random() * 360);
+        return "linear-gradient(120deg, hsl(" + hue + ", 70%, 85%), hsl(" + ((hue + 50) % 360) + ", 70%, 75%))";
+    }
+
     function changeQuote() {
-        setTimeout(() => {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            console.log(randomIndex)
-            quoteBox.innerText = quotes[randomIndex];
-        }, 350);
+        quoteBox.style.opacity = 0;
+        quoteBox.style.transform = "scale(0.95)";
+        setTimeout(function() {
+            var index = Math.floor(Math.random() * quotes.length);
+            quoteBox.innerText = quotes[index];
+            document.body.style.background = getRandomColor();
+            quoteBox.style.opacity = 1;
+            quoteBox.style.transform = "scale(1)";
+        }, 400);
     }
 
     button.addEventListener("click", changeQuote);

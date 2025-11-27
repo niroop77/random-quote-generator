@@ -1,23 +1,29 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+
+    * { padding: 0; margin: 0; box-sizing: border-box; }
     body {
-        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: #f0f0f0;
         font-family: "Poppins", sans-serif;
+        transition: background 0.8s ease;
+        background: #f0f0f0;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     .quote-box {
-        width: 260px;
+        width: 280px;
         min-height: 120px;
-        background: #4a90e2;
+        background: rgba(0,0,0,0.7);
         color: white;
         border-radius: 15px;
         display: flex;
@@ -27,22 +33,25 @@
         text-align: center;
         font-size: 22px;
         font-weight: bold;
-        transition: opacity .4s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease;
         opacity: 1;
     }
 
     button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #333;
+        margin-top: 25px;
+        padding: 12px 25px;
+        background: #ff5f6d;
+        background: linear-gradient(to right, #ff5f6d, #ffc371);
         color: white;
         font-size: 16px;
+        font-weight: bold;
         border: none;
-        border-radius: 8px;
+        border-radius: 10px;
         cursor: pointer;
-        transition: .3s;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
     button:hover {
-        background: #555;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
