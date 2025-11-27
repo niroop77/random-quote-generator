@@ -5,70 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Random Quote Generator</title>
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 <h1>Random Quote Generator</h1>
 
-<div class="quote-box" id="quoteBox">🌟 Believe in yourself!</div>
+<div class="quote-box" id="quoteBox">Believe you can and you're halfway there. – Theodore Roosevelt</div>
 <button id="btn">New Quote</button>
 
-<script>
-    var quotes = [
-        "🌟 Believe in yourself!",
-        "💡 Creativity takes courage!",
-        "🔥 Push your limits!",
-        "🌈 Enjoy the little things!",
-        "✨ Make today amazing!",
-        "💪 Stay strong!",
-        "😊 Keep smiling!",
-        "🚀 Reach for the stars!",
-        "🤳 Just me, myself, and my selfie!",
-        "🔄 Because every angle matters!",
-        "🎨 Life’s a filter. Choose yours wisely!",
-        "🪐 In my own little universe!",
-        "🔮 Reflecting on the reflections!",
-        "😎 Serving looks, not tea!",
-        "📱 A selfie a day keeps the blues away!",
-        "💡 Caught in my best light!",
-        "💖 There’s beauty in every perspective!",
-        "🌸 Bloom where you are planted!",
-        "🌞 Shine bright like the sun!",
-        "🎯 Focus on what matters!",
-        "🏞️ Explore more, worry less!",
-        "🕊️ Peace begins with a smile!",
-        "🎶 Dance like nobody's watching!",
-        "📚 Knowledge is power!",
-        "🍀 Luck favors the prepared!",
-        "💫 Magic is in the little things!",
-        "🎈 Happiness is homemade!",
-        "🌻 Keep growing!",
-        "🌌 Dream big, aim higher!",
-        "🌊 Go with the flow!"
-    ];
 
-    var quoteBox = document.getElementById("quoteBox");
-    var button = document.getElementById("btn");
-
-    function getRandomColor() {
-        var hue = Math.floor(Math.random() * 360);
-        return "linear-gradient(120deg, hsl(" + hue + ", 70%, 85%), hsl(" + ((hue + 50) % 360) + ", 70%, 75%))";
-    }
-
-    function changeQuote() {
-        quoteBox.style.opacity = 0;
-        quoteBox.style.transform = "scale(0.95)";
-        setTimeout(function() {
-            var index = Math.floor(Math.random() * quotes.length);
-            quoteBox.innerText = quotes[index];
-            document.body.style.background = getRandomColor();
-            quoteBox.style.opacity = 1;
-            quoteBox.style.transform = "scale(1)";
-        }, 400);
-    }
-
-    button.addEventListener("click", changeQuote);
-</script>
-
+<script src="one.js"></script>
 </body>
 </html>
