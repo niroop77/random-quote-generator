@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote Generator</title>
+
+</head>
+<body>
+
+<div class="quote-box" id="quoteBox">🌟 Believe in yourself!</div>
+
+<button id="btn">Change Quote</button>
+
+<script>
+    var quotes = [
+        "🌟 Believe in yourself!",
+        "💡 Creativity takes courage!",
+        "🔥 Push your limits!",
+        "🌈 Enjoy the little things!",
+        "✨ Make today amazing!",
+        "💪 Stay strong!",
+        "😊 Keep smiling!",
+        "🚀 Reach for the stars!",
+        "🤳 Just me, myself, and my selfie!",
+        "🔄 Because every angle matters!",
+        "🎨 Life’s a filter. Choose yours wisely!",
+        "🪐 In my own little universe!",
+        "🔮 Reflecting on the reflections!",
+        "😎 Serving looks, not tea!",
+        "📱 A selfie a day keeps the blues away!",
+        "💡 Caught in my best light!",
+        "💖 There’s beauty in every perspective!",
+        "🌸 Bloom where you are planted!",
+        "🌞 Shine bright like the sun!",
+        "🎯 Focus on what matters!",
+        "🏞️ Explore more, worry less!",
+        "🕊️ Peace begins with a smile!",
+        "🎶 Dance like nobody's watching!",
+        "📚 Knowledge is power!",
+        "🍀 Luck favors the prepared!",
+        "💫 Magic is in the little things!",
+        "🎈 Happiness is homemade!",
+        "🌻 Keep growing!",
+        "🌌 Dream big, aim higher!",
+        "🌊 Go with the flow!"
+    ];
+
+    var quoteBox = document.getElementById("quoteBox");
+    var button = document.getElementById("btn");
+
+    function changeQuote() {
+        setTimeout(() => {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            console.log(randomIndex)
+            quoteBox.innerText = quotes[randomIndex];
+        }, 350);
+    }
+
+    button.addEventListener("click", changeQuote);
+</script>
+
+</body>
+</html>

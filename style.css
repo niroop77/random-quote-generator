@@ -1,0 +1,48 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f0f0f0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .quote-box {
+        width: 260px;
+        min-height: 120px;
+        background: #4a90e2;
+        color: white;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        transition: opacity .4s ease;
+        opacity: 1;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    button:hover {
+        background: #555;
+    }
